@@ -93,11 +93,12 @@ HS_HP_TYPE = "/heatSources/hs1/heatPumpType"
 HS_STANDBY = "/heatSources/standbyMode"
 HS_EM_STATUS = "/heatSources/emStatus"
 
-# Brine circuit (ground source). "Collector" = the borehole loop, so
-# collectorOutflowTemp is brine coming from the borehole INTO the heat pump,
-# collectorInflowTemp is brine leaving the heat pump back to the borehole.
-HS_BRINE_IN_TEMP = "/heatSources/hs1/brineCircuit/collectorOutflowTemp"
-HS_BRINE_OUT_TEMP = "/heatSources/hs1/brineCircuit/collectorInflowTemp"
+# Brine circuit (ground source). Named from the heat pump's side: while the
+# compressor runs, collectorInflowTemp is the warmer brine coming up from the
+# borehole INTO the heat pump, and collectorOutflowTemp the brine leaving the
+# evaporator ~3 °C colder, back to the borehole.
+HS_BRINE_IN_TEMP = "/heatSources/hs1/brineCircuit/collectorInflowTemp"
+HS_BRINE_OUT_TEMP = "/heatSources/hs1/brineCircuit/collectorOutflowTemp"
 
 # ── Energy Monitoring (lifetime kWh counters) ───────────────
 # Returns {"type": "emonValue", "unit": "kWh",
