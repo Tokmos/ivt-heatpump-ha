@@ -100,6 +100,11 @@ HS_EM_STATUS = "/heatSources/emStatus"
 HS_BRINE_IN_TEMP = "/heatSources/hs1/brineCircuit/collectorInflowTemp"
 HS_BRINE_OUT_TEMP = "/heatSources/hs1/brineCircuit/collectorOutflowTemp"
 
+# Refrigerant circuit: what the compressor is serving right now
+# (off / heating / cooling / dhw / pool / pool_heat / defrost / alarm) and its speed in %.
+HS_REFRIGERANT_STATUS = "/heatSources/hs1/refrigerant/status"
+HS_COMPRESSOR_SPEED = "/heatSources/hs1/refrigerant/compressorActualSpeed"
+
 # ── Energy Monitoring (lifetime kWh counters) ───────────────
 # Returns {"type": "emonValue", "unit": "kWh",
 #          "values": [{"outputProduced": n}, {"eheater": n}, {"compressor": n}]}

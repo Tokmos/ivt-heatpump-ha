@@ -61,6 +61,8 @@ from .const import (
     HS_HS1_STARTS,
     HS_BRINE_IN_TEMP,
     HS_BRINE_OUT_TEMP,
+    HS_REFRIGERANT_STATUS,
+    HS_COMPRESSOR_SPEED,
     # System
     SYS_OUTDOOR_TEMP,
     SYS_TYPE,
@@ -132,6 +134,7 @@ STATUS_SENSORS = [
     (HS_CH_STATUS, "Central Heating Active", None, None, None, "mdi:fire", None),
     (HS_HEAT_DEMAND, "Heat Demand Source", None, None, None, "mdi:fire-circle", None),
     (HS_STANDBY, "Heat Pump Standby", None, None, None, "mdi:power-standby", "diagnostic"),
+    (HS_REFRIGERANT_STATUS, "Heat Pump Operation", None, None, None, "mdi:heat-pump", None),
     (HS_EM_STATUS, "External Module Status", None, None, None, "mdi:expansion-card", "diagnostic"),
     (SYS_TYPE, "System Type", None, None, None, "mdi:heat-pump", "diagnostic"),
     (GW_SERIAL, "Gateway Serial", None, None, None, "mdi:identifier", "diagnostic"),
@@ -146,6 +149,7 @@ STATUS_SENSORS = [
 
 NUMERIC_SENSORS = [
     (HS_ACTUAL_MODULATION, "Compressor Modulation", None, SensorStateClass.MEASUREMENT, PERCENTAGE, "mdi:gauge", None),
+    (HS_COMPRESSOR_SPEED, "Compressor Speed", None, SensorStateClass.MEASUREMENT, PERCENTAGE, "mdi:speedometer", None),
     (HS_NUM_STARTS, "Heat Pump Starts", None, SensorStateClass.TOTAL_INCREASING, None, "mdi:counter", "diagnostic"),
     (DHW_CHARGE_DURATION, "Charge Duration Setting", None, None, "min", "mdi:timer-outline", "diagnostic"),
 ]
